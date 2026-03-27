@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Current Time</title>
+</head>
+<body>
+<h1>Current Time</h1>
+
+<p>Time zone: <span th:text="${timezone}">UTC</span></p>
+<p>Current time: <span th:text="${currentTime}">2022-01-01 00:00:00</span></p>
+
+<form action="/TimeApp/time" method="get">
+    <label for="timezone">Enter timezone:</label>
+    <input type="text" id="timezone" name="timezone" placeholder="UTC, UTC+2, Europe/Kiev">
+    <button type="submit">Show Time</button>
+</form>
+</body>
+</html>
